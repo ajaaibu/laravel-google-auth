@@ -57,6 +57,7 @@ class GoogleUserProvider implements UserProviderInterface {
         if($access != "offline"){
           $this->client->setApprovalPrompt("auto");
         }
+        return $this;
     }
 
     /**
