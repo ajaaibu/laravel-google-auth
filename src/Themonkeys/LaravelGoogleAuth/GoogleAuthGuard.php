@@ -29,6 +29,10 @@ class GoogleAuthGuard extends Guard {
         return $this->provider->getAuthUrl();
     }
 
+    public function setAccessType($access){
+      return $this->provider->setAccessType($access);
+    }
+
     /**
      * If this request is the redirect from a successful authorization grant, store the access token in the session
      * and return a Laravel redirect Response to send the user to their requested page. Otherwise returns null

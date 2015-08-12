@@ -52,6 +52,13 @@ class GoogleUserProvider implements UserProviderInterface {
         }
     }
 
+    public function setAccessType($access="offline"){
+        $this->client->setAccessType($access);
+        if($access != "offline"){
+          $this->client->setApprovalPrompt("auto");
+        }
+    }
+
     /**
      * Validate a user against the given credentials.
      *
